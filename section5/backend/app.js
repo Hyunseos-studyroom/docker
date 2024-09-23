@@ -84,11 +84,11 @@ app.delete('/goals/:id', async (req, res) => {
 });
 
 mongoose.connect(
-  'mongodb://localhost:27017/course-goals',
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  },
+    'mongodb://max:secret@mongodb:27017/course-goals?authSource=admin',
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    },
   (err) => {
     if (err) {
       console.error('FAILED TO CONNECT TO MONGODB');
